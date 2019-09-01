@@ -5,19 +5,22 @@
             "name": "client",
             "image": "emiliolopez95/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "api",
             "image": "emiliolopez95/multi-api",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "worker",
             "image": "emiliolopez95/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
@@ -33,7 +36,8 @@
             "links": [
                 "client",
                 "api"
-            ]
+            ],
+            "memory": 128
         }
     ]
 }
