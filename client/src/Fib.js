@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Fib extends Component {
+  constructor (props) {
   state = {
     seenIndexes: [],
     values: {},
     index: ''
   };
+}
 
   componentDidMount() {
     this.fetchValues();
@@ -35,6 +37,7 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
+    console.log(this.state.seenIndexes)
     return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
