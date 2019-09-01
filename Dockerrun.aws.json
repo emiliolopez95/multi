@@ -6,21 +6,36 @@
             "image": "emiliolopez95/multi-client",
             "hostname": "client",
             "essential": false,
-            "memory": 128
+            "memory": 128,
+            "command": [
+                "tail",
+                "-f",
+                "/bin/bash"
+            ]
         },
         {
             "name": "api",
             "image": "emiliolopez95/multi-api",
             "hostname": "api",
             "essential": false,
-            "memory": 128
+            "memory": 128,
+            "command": [
+                "tail",
+                "-f",
+                "/bin/bash"
+            ]
         },
         {
             "name": "worker",
             "image": "emiliolopez95/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory": 128
+            "memory": 128,
+            "command": [
+                "tail",
+                "-f",
+                "/bin/bash"
+            ]
         },
         {
             "name": "nginx",
@@ -37,7 +52,12 @@
                 "client",
                 "api"
             ],
-            "memory": 128
+            "memory": 128,
+            "command": [
+                "tail",
+                "-f",
+                "/bin/bash"
+            ]
         }
     ]
 }
