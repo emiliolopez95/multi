@@ -3,12 +3,18 @@ import axios from 'axios';
 
 class Fib extends Component {
   constructor (props) {
-  state = {
-    seenIndexes: [],
-    values: {},
-    index: ''
-  };
-}
+    state = {
+      seenIndexes: [],
+      values: {},
+      index: ''
+    };
+    this.fetchValues = this.fetchValues.bind(this)
+    this.fetchIndexes = this.fetchIndexes.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.renderSeenIndexes = this.renderSeenIndexes.bind(this)
+    this.renderValues = this.renderValues.bind(this)
+
+  }
 
   componentDidMount() {
     this.fetchValues();
